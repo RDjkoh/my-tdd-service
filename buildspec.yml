@@ -7,7 +7,7 @@ phases:
       - npm install --save-dev serverless-mocha-plugin
   build:
     commands:
-      - sls invoke test
+      - sls invoke test > buildresult.txt
       
 artifacts:
   files:
