@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g serverless
+      - npm install --save-dev serverless-mocha-plugin
+  build:
+    commands:
+      - sls invoke test
+      
+artifacts:
+  files:
+    - buildresult.txt
+  discard-paths: yes
